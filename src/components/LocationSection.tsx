@@ -14,12 +14,12 @@ const LocationSection = () => (
           </p>
           <div className="space-y-4 mb-8">
             <div className="glass-card rounded-xl p-4">
-              <p className="text-foreground font-heading text-lg">Portmore Town Centre</p>
-              <p className="text-muted-foreground text-sm">Main Street, Portmore, St. Catherine, Jamaica</p>
+              <p className="text-foreground font-heading text-lg">Independence City Community Centre</p>
+              <p className="text-muted-foreground text-sm">Portmore, St. Catherine, Jamaica</p>
             </div>
             <div className="glass-card rounded-xl p-4">
-              <p className="text-foreground font-heading text-lg">August 15–17, 2026</p>
-              <p className="text-muted-foreground text-sm">Gates open at 9:00 AM daily</p>
+              <p className="text-foreground font-heading text-lg">May 15, 2026</p>
+              <p className="text-muted-foreground text-sm">11:00 AM – 3:00 PM • Free Entry</p>
             </div>
           </div>
           <a

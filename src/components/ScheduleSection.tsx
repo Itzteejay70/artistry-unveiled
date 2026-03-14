@@ -2,12 +2,12 @@ import { Palette, Music, Users, Mic2, PartyPopper, GraduationCap } from "lucide-
 import AnimatedSection from "./AnimatedSection";
 
 const schedule = [
-  { time: "10:00 AM", title: "Opening Ceremony", desc: "Welcome address and ribbon cutting with live drumming", icon: PartyPopper, day: "Day 1" },
-  { time: "11:30 AM", title: "Artist Showcases", desc: "Live painting demonstrations by featured artists", icon: Palette, day: "Day 1" },
-  { time: "2:00 PM", title: "Workshops", desc: "Pottery, bead making, and oil diffuser crafting sessions", icon: GraduationCap, day: "Day 1" },
-  { time: "5:00 PM", title: "Live Performances", desc: "Music and spoken word performances on the main stage", icon: Music, day: "Day 2" },
-  { time: "11:00 AM", title: "Panel Discussions", desc: "Art & Community: Building creative economies in Jamaica", icon: Mic2, day: "Day 2" },
-  { time: "6:00 PM", title: "Closing Event", desc: "Award ceremony, final showcase, and afterparty", icon: Users, day: "Day 3" },
+  { time: "11:00 AM", title: "Opening Ceremony", desc: "Welcome address and ribbon cutting with live drumming", icon: PartyPopper },
+  { time: "11:30 AM", title: "Outdoor Art Exhibition", desc: "Featuring local artists including Travis Arts, Javeer Arts, Locksley Watson & more", icon: Palette },
+  { time: "12:00 PM", title: "Live Performances", desc: "Music and spoken word performances on the main stage", icon: Music },
+  { time: "1:00 PM", title: "Creative Expo", desc: "Interactive art activities and creative demonstrations", icon: GraduationCap },
+  { time: "2:00 PM", title: "Artist Showcases", desc: "Live painting demonstrations by featured artists", icon: Mic2 },
+  { time: "3:00 PM", title: "Closing Celebration", desc: "Final showcase and community celebration", icon: Users },
 ];
 
 const ScheduleSection = () => (
@@ -30,8 +30,7 @@ const ScheduleSection = () => (
 
               {/* Content */}
               <div className={`ml-16 md:ml-0 md:w-[calc(50%-2rem)] ${i % 2 === 0 ? "md:pr-12 md:text-right" : "md:pl-12"}`}>
-                <span className="text-xs font-body text-purple uppercase tracking-widest">{item.day}</span>
-                <div className="glass-card rounded-xl p-6 mt-2">
+                <div className="glass-card rounded-xl p-6">
                   <div className="flex items-center gap-3 mb-2" style={{ flexDirection: i % 2 === 0 ? "row-reverse" : "row" }}>
                     <item.icon className="text-lime flex-shrink-0" size={20} />
                     <span className="text-lime text-sm font-body">{item.time}</span>
