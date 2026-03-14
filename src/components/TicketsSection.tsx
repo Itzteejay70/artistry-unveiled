@@ -4,23 +4,10 @@ import AnimatedSection from "./AnimatedSection";
 
 const tickets = [
   {
-    name: "General Admission",
-    price: "$25",
-    features: ["Access to all exhibition areas", "Live performances", "Workshop participation", "Food court access"],
-    popular: false,
-  },
-  {
-    name: "VIP Pass",
-    price: "$75",
-    features: ["All General perks", "VIP lounge access", "Meet & greet with artists", "Complimentary drinks", "Exclusive merch bag"],
+    name: "Free Entry",
+    price: "FREE",
+    features: ["Access to all exhibition areas", "Live performances", "Creative expo activities", "Outdoor art exhibition"],
     popular: true,
-  },
-  {
-    name: "Group Ticket",
-    price: "$80",
-    sub: "for 4 guests",
-    features: ["General admission x4", "Reserved seating area", "Group photo opportunity", "10% vendor discount"],
-    popular: false,
   },
 ];
 
