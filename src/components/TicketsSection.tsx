@@ -19,7 +19,7 @@ const TicketsSection = () => (
         <h2 className="font-heading text-4xl md:text-6xl text-foreground">Get Your Tickets</h2>
       </AnimatedSection>
 
-      <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+      <div className="flex justify-center max-w-5xl mx-auto">
         {tickets.map((t, i) => (
           <AnimatedSection key={t.name} delay={i * 0.15}>
             <motion.div
