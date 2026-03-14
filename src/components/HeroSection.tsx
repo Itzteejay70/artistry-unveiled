@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import galleryNight from "@/assets/gallery-night.webp";
 import confetti from "@/assets/confetti.jpeg";
 
-const EVENT_DATE = new Date("2026-08-15T10:00:00");
+const EVENT_DATE = new Date("2026-05-15T11:00:00");
 
 const HeroSection = () => {
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
