@@ -44,7 +44,7 @@ const HeroSection = () => {
           transition={{ delay: 0.3 }}
           className="font-body text-lime text-sm tracking-[0.3em] uppercase mb-4"
         >
-          August 15–17, 2026 • Portmore, Jamaica
+          May 15, 2026 • 11AM–3PM • Portmore, Jamaica
         </motion.p>
 
         <motion.h1

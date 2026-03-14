@@ -30,8 +30,7 @@ const ScheduleSection = () => (
 
               {/* Content */}
               <div className={`ml-16 md:ml-0 md:w-[calc(50%-2rem)] ${i % 2 === 0 ? "md:pr-12 md:text-right" : "md:pl-12"}`}>
-                <span className="text-xs font-body text-purple uppercase tracking-widest">{item.day}</span>
-                <div className="glass-card rounded-xl p-6 mt-2">
+                <div className="glass-card rounded-xl p-6">
                   <div className="flex items-center gap-3 mb-2" style={{ flexDirection: i % 2 === 0 ? "row-reverse" : "row" }}>
                     <item.icon className="text-lime flex-shrink-0" size={20} />
                     <span className="text-lime text-sm font-body">{item.time}</span>
