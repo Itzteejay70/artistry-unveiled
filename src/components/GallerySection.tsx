@@ -8,7 +8,7 @@ import {
 import { X } from "lucide-react";
 import AnimatedSection from "./AnimatedSection";
 
-import workshopImg from "@/assets/workshop.jpeg";
+import workshopImg from "@/assets/workshops.jpeg";
 import artwork1 from "@/assets/artwork1.jpg";
 import festivalOutdoor from "@/assets/festival-outdoor.webp";
 import festivalPark from "@/assets/festival-park.webp";
