@@ -22,26 +22,31 @@ const GallerySection = () => {
   const [selected, setSelected] = useState<typeof artworks[0] | null>(null);
 
   return (
-    <section id="gallery" className="py-24 md:py-32">
+    <section id="gallery" className="py-24 md:py-32 relative overflow-hidden">
+      <div className="absolute -left-10 top-20 w-40 h-40 paint-blob bg-gold/5 pointer-events-none" />
+      <div className="absolute -right-10 bottom-20 w-48 h-48 paint-blob bg-purple/5 pointer-events-none" />
+
       <div className="container mx-auto px-4">
         <AnimatedSection className="text-center mb-16">
-          <p className="text-lime font-body text-sm tracking-[0.2em] uppercase mb-4">Artwork Showcase</p>
-          <h2 className="font-heading text-4xl md:text-6xl text-foreground">The Gallery</h2>
+          <div className="inline-block bg-purple/15 border border-purple/30 rounded-full px-4 py-1.5 mb-4">
+            <span className="text-primary font-body text-sm tracking-[0.2em] uppercase">Artwork Showcase</span>
+          </div>
+          <h2 className="font-heading text-4xl md:text-6xl text-foreground mb-4">The Gallery</h2>
+          <div className="h-1 w-24 bg-gradient-to-r from-purple via-gold to-lime rounded-full mx-auto" />
         </AnimatedSection>
 
-        {/* Masonry Grid */}
         <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
           {artworks.map((a, i) => (
             <AnimatedSection key={a.title} delay={i * 0.08}>
               <motion.div
                 whileHover={{ scale: 1.02 }}
                 onClick={() => setSelected(a)}
-                className="group relative overflow-hidden rounded-xl cursor-pointer break-inside-avoid"
+                className="group relative overflow-hidden rounded-2xl cursor-pointer break-inside-avoid border-2 border-transparent hover:border-gold/30 transition-colors duration-300"
               >
                 <img src={a.img} alt={a.title} className="w-full object-cover transition-transform duration-700 group-hover:scale-110" />
                 <div className="absolute inset-0 bg-background/70 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
                   <h3 className="font-heading text-xl text-foreground">{a.title}</h3>
-                  <p className="text-lime text-sm">{a.artist}</p>
+                  <p className="text-gold text-sm">{a.artist}</p>
                 </div>
               </motion.div>
             </AnimatedSection>
@@ -66,16 +71,17 @@ const GallerySection = () => {
               className="relative max-w-4xl w-full glass-card rounded-2xl overflow-hidden"
               onClick={(e) => e.stopPropagation()}
             >
-              <button onClick={() => setSelected(null)} className="absolute top-4 right-4 z-10 text-foreground hover:text-lime transition-colors">
+              <button onClick={() => setSelected(null)} className="absolute top-4 right-4 z-10 text-foreground hover:text-gold transition-colors">
                 <X size={28} />
               </button>
               <div className="grid md:grid-cols-2">
                 <img src={selected.img} alt={selected.title} className="w-full h-full object-cover max-h-[70vh]" />
                 <div className="p-8 flex flex-col justify-center">
                   <h3 className="font-heading text-3xl text-foreground mb-2">{selected.title}</h3>
-                  <p className="text-lime font-body mb-4">{selected.artist}</p>
+                  <p className="text-gold font-body mb-4">{selected.artist}</p>
+                  <div className="h-0.5 w-16 bg-gradient-to-r from-gold to-lime rounded-full mb-4" />
                   <p className="text-muted-foreground leading-relaxed mb-6">{selected.desc}</p>
-                  <button className="border border-lime/50 text-lime px-6 py-3 rounded-full font-semibold hover:bg-lime/10 transition-colors self-start">
+                  <button className="border border-gold/50 text-gold px-6 py-3 rounded-full font-semibold hover:bg-gold/10 transition-colors self-start">
                     Inquire About This Artwork
                   </button>
                 </div>

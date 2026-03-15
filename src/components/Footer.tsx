@@ -5,13 +5,15 @@ const Footer = () => {
   const [subscribed, setSubscribed] = useState(false);
 
   return (
-    <footer className="bg-muted/30 border-t border-border/30 py-16">
+    <footer className="bg-muted/30 border-t border-border/30 py-16 relative overflow-hidden">
+      <div className="absolute -right-10 -bottom-10 w-48 h-48 paint-blob bg-purple/5 pointer-events-none" />
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-3 gap-12 mb-12">
           <div>
-            <h3 className="font-display text-2xl tracking-wider text-foreground mb-4">PORTMORE ART CONNECT</h3>
+            <h3 className="font-display text-2xl tracking-wider text-foreground mb-2">PORTMORE ART CONNECT</h3>
+            <div className="h-1 w-16 bg-gradient-to-r from-lime via-gold to-purple rounded-full mb-4" />
             <p className="text-muted-foreground text-sm leading-relaxed">
-              Celebrating Caribbean art, culture, and community. Join us for an unforgettable artistic experience.
+              Celebrating Caribbean art, culture, and community. Join us for an unforgettable artistic experience in Portmore, Jamaica.
             </p>
           </div>
 
@@ -50,15 +52,18 @@ const Footer = () => {
             )}
 
             <div className="flex gap-4 mt-6">
-              {["Instagram", "Twitter", "Facebook", "YouTube"].map((s) => (
-                <a key={s} href="#" className="text-muted-foreground text-sm hover:text-lime transition-colors">
+              {["Instagram", "Facebook", "YouTube"].map((s) => (
+                <a key={s} href="#" className="text-muted-foreground text-sm hover:text-gold transition-colors">
                   {s}
                 </a>
               ))}
             </div>
 
             <p className="text-muted-foreground text-sm mt-4">
-              Contact: <a href="mailto:info@portmoreartconnect.com" className="hover:text-lime transition-colors">info@portmoreartconnect.com</a>
+              Contact: <a href="mailto:Portmoreartconnect@gmail.com" className="hover:text-lime transition-colors">Portmoreartconnect@gmail.com</a>
+            </p>
+            <p className="text-muted-foreground text-sm mt-1">
+              Phone: <a href="tel:8764389159" className="hover:text-lime transition-colors">876-438-9159</a>
             </p>
           </div>
         </div>

@@ -89,6 +89,11 @@
     background-image: linear-gradient(135deg, hsl(var(--purple)), hsl(var(--lime)));
   }
 
+  .text-gradient-festival {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(var(--gold)), hsl(var(--lime)), hsl(var(--purple)));
+  }
+
   .bg-gradient-primary {
     background-image: linear-gradient(135deg, hsl(var(--purple)), hsl(var(--purple-deep)));
   }
@@ -98,7 +103,11 @@
   }
 
   .bg-gradient-hero {
-    background: linear-gradient(180deg, hsla(270, 80%, 15%, 0.9) 0%, hsla(0, 0%, 4%, 0.95) 100%);
+    background: linear-gradient(180deg, hsla(270, 80%, 15%, 0.85) 0%, hsla(0, 0%, 4%, 0.95) 100%);
+  }
+
+  .bg-gradient-festival {
+    background: linear-gradient(135deg, hsla(270, 70%, 20%, 0.9), hsla(0, 0%, 4%, 0.95), hsla(75, 85%, 20%, 0.3));
   }
 
   .glass-card {
@@ -112,6 +121,30 @@
   .hover-lift:hover {
     transform: translateY(-8px);
     box-shadow: 0 20px 60px -15px hsla(var(--purple) / 0.3);
+  }
+
+  /* Paint stroke decorative pseudo-element */
+  .paint-stroke {
+    position: relative;
+  }
+  .paint-stroke::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    right: 0;
+    height: 8px;
+    background: linear-gradient(90deg, hsl(var(--lime)), hsl(var(--gold)), hsl(var(--purple)));
+    border-radius: 4px;
+    opacity: 0.8;
+  }
+
+  .paint-blob {
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  }
+
+  .torn-edge {
+    clip-path: polygon(0% 0%, 3% 2%, 7% 0%, 10% 1%, 14% 0%, 18% 2%, 22% 0%, 25% 1%, 30% 0%, 33% 2%, 37% 0%, 40% 1%, 44% 0%, 48% 2%, 52% 0%, 55% 1%, 60% 0%, 63% 2%, 67% 0%, 70% 1%, 74% 0%, 78% 2%, 82% 0%, 85% 1%, 90% 0%, 93% 2%, 97% 0%, 100% 1%, 100% 100%, 97% 98%, 93% 100%, 90% 99%, 85% 100%, 82% 98%, 78% 100%, 74% 99%, 70% 100%, 67% 98%, 63% 100%, 60% 99%, 55% 100%, 52% 98%, 48% 100%, 44% 99%, 40% 100%, 37% 98%, 33% 100%, 30% 99%, 25% 100%, 22% 98%, 18% 100%, 14% 99%, 10% 100%, 7% 98%, 3% 100%, 0% 99%);
   }
 }
 
