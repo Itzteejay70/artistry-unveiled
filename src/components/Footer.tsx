@@ -116,9 +116,17 @@ const Footer = () => {
 
         {/* Bottom bar */}
         <div className="border-t border-border/30 pt-8 text-center">
-          <p className="text-xs text-muted-foreground">
-            © 2026 Portmore Art Connect. All rights reserved.
-          </p>
+       <p className="text-muted-foreground text-xs">
+  © 2026 Portmore Art Connect • Designed & Developed by{" "}
+  <a
+    href="https://toluwalope-oredipe-portfolio.vercel.app/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="hover:text-lime transition-colors"
+  >
+    Toluwalope Oredipe
+  </a>
+</p>
         </div>
       </div>
     </footer>
