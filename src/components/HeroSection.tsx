@@ -2,6 +2,9 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import galleryNight from "@/assets/gallery-night.webp";
 import festivalCollage from "@/assets/festival-collage.png";
+import decorBrushBlue from "@/assets/decor-brush-blue.jpeg";
+import decorBrushGreen from "@/assets/decor-brush-green.jpeg";
+import decorConfetti from "@/assets/decor-confetti.jpeg";
 
 const EVENT_DATE = new Date("2026-05-15T11:00:00");
 
@@ -32,11 +35,33 @@ const HeroSection = () => {
         <div className="absolute inset-0 bg-gradient-festival" />
       </div>
 
+      {/* Decorative paint brushes & confetti */}
+      <motion.img
+        src={decorBrushBlue}
+        alt=""
+        className="absolute -top-10 -right-10 w-48 md:w-64 opacity-20 pointer-events-none rotate-12"
+        animate={{ y: [0, -8, 0] }}
+        transition={{ duration: 5, repeat: Infinity }}
+      />
+      <motion.img
+        src={decorBrushGreen}
+        alt=""
+        className="absolute -bottom-10 -left-6 w-32 md:w-48 opacity-20 pointer-events-none -rotate-45"
+        animate={{ y: [0, 10, 0] }}
+        transition={{ duration: 6, repeat: Infinity }}
+      />
+      <motion.img
+        src={decorConfetti}
+        alt=""
+        className="absolute top-10 left-10 w-24 md:w-32 opacity-15 pointer-events-none"
+        animate={{ rotate: [0, 5, -5, 0] }}
+        transition={{ duration: 8, repeat: Infinity }}
+      />
+
       {/* Floating paint blobs */}
       <div className="absolute top-20 right-10 w-32 h-32 paint-blob bg-lime/10 animate-float pointer-events-none" />
       <div className="absolute bottom-40 left-8 w-24 h-24 paint-blob bg-purple/15 animate-float-slow pointer-events-none" />
       <div className="absolute top-1/3 right-1/4 w-16 h-16 paint-blob bg-gold/10 animate-float pointer-events-none" />
-      <div className="absolute bottom-20 right-20 w-20 h-20 paint-blob bg-lime/8 animate-float-slow pointer-events-none" />
 
       {/* Split layout */}
       <div className="relative z-10 container mx-auto px-4 py-32">
