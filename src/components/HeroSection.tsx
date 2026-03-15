@@ -49,16 +49,17 @@ const HeroSection = () => {
         <img
           src={galleryNight}
           alt=""
-          className="w-full h-full object-cover scale-110"
+          className="w-full h-full object-cover scale-105"
         />
         <div className="absolute inset-0 bg-gradient-festival" />
+        <div className="absolute inset-0 bg-black/25" />
       </div>
 
-      {/* Decorative paint brushes */}
+      {/* Decorative assets */}
       <motion.img
         src={decorBrushBlue}
         alt=""
-        className="absolute -top-10 -right-10 w-48 md:w-64 opacity-20 pointer-events-none rotate-12"
+        className="absolute -top-8 -right-8 w-40 md:w-56 opacity-15 pointer-events-none rotate-12"
         animate={{ y: [0, -8, 0] }}
         transition={{ duration: 5, repeat: Infinity }}
       />
@@ -66,40 +67,38 @@ const HeroSection = () => {
       <motion.img
         src={decorBrushGreen}
         alt=""
-        className="absolute -bottom-10 -left-6 w-32 md:w-48 opacity-20 pointer-events-none -rotate-45"
+        className="absolute -bottom-8 -left-6 w-28 md:w-40 opacity-15 pointer-events-none -rotate-45"
         animate={{ y: [0, 10, 0] }}
         transition={{ duration: 6, repeat: Infinity }}
       />
 
-      {/* Floating paint blobs */}
-      <div className="absolute top-20 right-10 w-32 h-32 paint-blob bg-lime/10 animate-float pointer-events-none" />
-      <div className="absolute bottom-40 left-8 w-24 h-24 paint-blob bg-purple/15 animate-float-slow pointer-events-none" />
-      <div className="absolute top-1/3 right-1/4 w-16 h-16 paint-blob bg-gold/10 animate-float pointer-events-none" />
+      <div className="absolute top-20 right-10 w-28 h-28 paint-blob bg-lime/10 animate-float pointer-events-none" />
+      <div className="absolute bottom-32 left-8 w-20 h-20 paint-blob bg-purple/15 animate-float-slow pointer-events-none" />
 
-      {/* Soft glow behind content */}
+      {/* Soft glow */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-        <div className="w-[320px] h-[320px] md:w-[500px] md:h-[500px] rounded-full bg-purple/20 blur-3xl" />
+        <div className="w-[320px] h-[320px] md:w-[520px] md:h-[520px] rounded-full bg-purple/20 blur-3xl" />
       </div>
 
-      {/* Centered content */}
-      <div className="relative z-10 container mx-auto px-4 py-32">
+      {/* Content */}
+      <div className="relative z-10 container mx-auto px-4 py-28 md:py-32">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.7 }}
-            className="inline-block bg-lime/15 border border-lime/30 rounded-full px-5 py-2 mb-6"
+            className="inline-flex items-center rounded-full border border-lime/30 bg-lime/15 px-5 py-2 mb-6"
           >
-            <span className="font-body text-lime text-sm tracking-wider uppercase">
+            <span className="font-body text-lime text-xs sm:text-sm tracking-[0.18em] uppercase">
               May 15, 2026 • 11AM–3PM • Portmore, Jamaica
             </span>
           </motion.div>
 
           <motion.h1
-            initial={{ opacity: 0, y: 40 }}
+            initial={{ opacity: 0, y: 36 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4, duration: 0.8 }}
-            className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-[0.9] tracking-wider mb-6"
+            transition={{ delay: 0.35, duration: 0.8 }}
+            className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-[0.9] tracking-wide mb-5"
           >
             <span className="text-foreground">PORTMORE</span>
             <br />
@@ -110,60 +109,73 @@ const HeroSection = () => {
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 0.7 }}
-            className="font-heading text-xl md:text-2xl text-foreground/70 italic mb-4 max-w-2xl mx-auto"
+            transition={{ delay: 0.55 }}
+            className="font-heading text-lg md:text-2xl text-foreground/80 italic max-w-2xl mx-auto mb-4"
           >
-            A vibrant Caribbean celebration of art, culture & community
+            Where Caribbean creativity comes alive
           </motion.p>
 
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 0.8 }}
-            className="text-sm md:text-base text-foreground/60 mb-8"
+            transition={{ delay: 0.7 }}
+            className="text-sm md:text-base text-foreground/70 max-w-2xl mx-auto mb-10"
           >
             Live Art • Workshops • Music • Vendors • Community
           </motion.p>
 
           {/* Countdown */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.9 }}
-            className="flex justify-center gap-4 md:gap-6 mb-10 flex-wrap"
+            transition={{ delay: 0.85 }}
+            className="mb-10"
           >
-            {[
-              { val: timeLeft.days, label: "Days" },
-              { val: timeLeft.hours, label: "Hrs" },
-              { val: timeLeft.minutes, label: "Min" },
-              { val: timeLeft.seconds, label: "Sec" },
-            ].map((t) => (
-              <div
-                key={t.label}
-                className="text-center bg-card/40 backdrop-blur-sm border border-border/30 rounded-xl px-4 py-3 min-w-[72px]"
-              >
-                <div className="font-display text-3xl md:text-4xl text-lime">
-                  {String(t.val).padStart(2, "0")}
+            <p className="text-xs md:text-sm uppercase tracking-[0.22em] text-foreground/60 mb-4">
+              Event starts in
+            </p>
+
+            <div className="flex justify-center gap-3 md:gap-5 flex-wrap">
+              {[
+                { val: timeLeft.days, label: "Days" },
+                { val: timeLeft.hours, label: "Hours" },
+                { val: timeLeft.minutes, label: "Minutes" },
+                { val: timeLeft.seconds, label: "Seconds" },
+              ].map((t) => (
+                <div
+                  key={t.label}
+                  className="w-[78px] md:w-[96px] rounded-2xl border border-white/10 bg-card/45 backdrop-blur-md px-3 py-4 text-center shadow-lg"
+                >
+                  <div className="font-display text-3xl md:text-4xl text-lime leading-none">
+                    {String(t.val).padStart(2, "0")}
+                  </div>
+                  <div className="text-[10px] md:text-xs text-muted-foreground uppercase tracking-[0.18em] mt-2">
+                    {t.label}
+                  </div>
                 </div>
-                <div className="text-[10px] text-muted-foreground uppercase tracking-widest mt-0.5">
-                  {t.label}
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </motion.div>
 
           {/* CTA */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1.1 }}
-            className="flex justify-center flex-col sm:flex-row gap-3"
+            transition={{ delay: 1 }}
+            className="flex justify-center flex-col sm:flex-row gap-3 sm:gap-4"
           >
             <a
-              href="#tickets"
+              href="#register"
               className="bg-gradient-lime text-secondary-foreground px-8 py-4 rounded-full font-semibold text-lg hover:opacity-90 transition-opacity text-center"
             >
               Get Tickets
+            </a>
+
+            <a
+              href="#apply"
+              className="border border-lime/40 text-lime px-8 py-4 rounded-full font-semibold text-lg hover:bg-lime/10 transition-colors text-center"
+            >
+              Apply as Artist/Vendor
             </a>
           </motion.div>
         </div>
@@ -173,7 +185,7 @@ const HeroSection = () => {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 2 }}
+        transition={{ delay: 1.8 }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2"
       >
         <div className="w-6 h-10 border-2 border-foreground/30 rounded-full flex justify-center">

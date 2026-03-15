@@ -5,10 +5,8 @@ import logoImg from "@/assets/logo.jpeg";
 
 const navLinks = [
   { label: "About", href: "#about" },
-  { label: "Artists", href: "#artists" },
   { label: "Gallery", href: "#gallery" },
   { label: "Schedule", href: "#schedule" },
-  { label: "Tickets", href: "#tickets" },
   { label: "Apply", href: "#apply" },
   { label: "Location", href: "#location" },
 ];
@@ -35,7 +33,7 @@ const Navbar = () => {
               {l.label}
             </a>
           ))}
-          <a href="#tickets" className="bg-gradient-lime text-secondary-foreground px-5 py-2 rounded-full text-sm font-semibold hover:opacity-90 transition-opacity">
+          <a href="#register" className="bg-gradient-lime text-secondary-foreground px-5 py-2 rounded-full text-sm font-semibold hover:opacity-90 transition-opacity">
             Get Tickets
           </a>
         </div>
@@ -59,7 +57,7 @@ const Navbar = () => {
                   {l.label}
                 </a>
               ))}
-              <a href="#tickets" className="bg-gradient-lime text-secondary-foreground px-5 py-3 rounded-full text-center font-semibold mt-2">
+              <a href="#register" className="bg-gradient-lime text-secondary-foreground px-5 py-3 rounded-full text-center font-semibold mt-2">
                 Get Tickets
               </a>
             </div>
