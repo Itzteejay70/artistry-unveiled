@@ -1,10 +1,13 @@
 import { motion } from "framer-motion";
 import AnimatedSection from "./AnimatedSection";
+import sponsorEasyAccess from "@/assets/sponsor-easyaccess.png";
+import sponsorEdnaManley from "@/assets/sponsor-ednamanley.jpeg";
+import sponsorTeamBmt from "@/assets/sponsor-teambmt.jpeg";
 
 const sponsors = [
-  "Easy Access Event Essentials",
-  "Edna Manley College of the Visual and Performing Arts",
-  "Team BMT International",
+  { name: "Easy Access Event Essentials", logo: sponsorEasyAccess, bg: "bg-white" },
+  { name: "Edna Manley College of the Visual and Performing Arts", logo: sponsorEdnaManley, bg: "bg-white" },
+  { name: "Team BMT International", logo: sponsorTeamBmt, bg: "bg-secondary" },
 ];
 
 const SponsorsSection = () => (
@@ -20,18 +23,20 @@ const SponsorsSection = () => (
         <div className="h-1 w-20 bg-gradient-to-r from-lime via-gold to-purple rounded-full mx-auto mt-4" />
       </AnimatedSection>
 
-      <div className="grid sm:grid-cols-3 gap-6 max-w-3xl mx-auto">
+      <div className="grid sm:grid-cols-3 gap-6 max-w-4xl mx-auto items-center">
         {sponsors.map((s, i) => (
-          <AnimatedSection key={s} delay={i * 0.1}>
+          <AnimatedSection key={s.name} delay={i * 0.1}>
             <motion.div
               whileHover={{ scale: 1.05 }}
-              className="glass-card rounded-2xl px-6 py-8 text-center hover:border-gold/40 transition-colors duration-300 cursor-pointer"
+              className={`glass-card rounded-2xl p-6 flex items-center justify-center hover:border-gold/40 transition-colors duration-300 cursor-pointer aspect-square ${s.bg}`}
             >
-              <div className="w-12 h-12 mx-auto mb-4 paint-blob bg-gold/15 flex items-center justify-center">
-                <span className="font-display text-xl text-gold">✦</span>
-              </div>
-              <p className="text-foreground font-body text-sm leading-relaxed">{s}</p>
+              <img
+                src={s.logo}
+                alt={s.name}
+                className="w-full h-full object-contain max-h-40"
+              />
             </motion.div>
+            <p className="text-muted-foreground font-body text-xs text-center mt-3 leading-relaxed">{s.name}</p>
           </AnimatedSection>
         ))}
       </div>

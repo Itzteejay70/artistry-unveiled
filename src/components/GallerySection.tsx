@@ -8,11 +8,17 @@ import artwork3 from "@/assets/artwork3.jpg";
 import artwork4 from "@/assets/artwork4.jpg";
 import artwork5 from "@/assets/artwork5.jpg";
 import artwork6 from "@/assets/artwork6.jpg";
+import festivalOutdoor from "@/assets/festival-outdoor.webp";
+import festivalPark from "@/assets/festival-park.webp";
+import festivalDj from "@/assets/festival-dj.jpeg";
 
 const artworks = [
   { img: artwork1, title: "Chromatic Pulse", artist: "Shana-Kay Williams", desc: "An explosion of Caribbean color expressing the rhythm of island life." },
+  { img: festivalOutdoor, title: "Art Under the Lights", artist: "Festival Scene", desc: "Vibrant outdoor art exhibition with colorful paintings displayed under string lights." },
   { img: artwork2, title: "Paradise Found", artist: "Marcus Thompson", desc: "A vivid tropical landscape capturing the essence of Jamaica's coastline." },
+  { img: festivalPark, title: "Art in the Park", artist: "Festival Scene", desc: "Community art displays in the park — paintings on easels bringing creativity to outdoor spaces." },
   { img: artwork3, title: "Rhythm & Soul", artist: "Tanya-Marie Dawes", desc: "Figurative celebration of Caribbean dance and cultural joy." },
+  { img: festivalDj, title: "Beats & Culture", artist: "Festival Scene", desc: "Live DJ performances bringing energy and music to the art festival experience." },
   { img: artwork4, title: "Tropical Flora", artist: "Devon Clarke", desc: "Mixed media collage celebrating the natural beauty of the Caribbean." },
   { img: artwork5, title: "Village Life", artist: "Shana-Kay Williams", desc: "Abstract expressionist piece depicting Caribbean community gatherings." },
   { img: artwork6, title: "Queen of the Island", artist: "Tanya-Marie Dawes", desc: "Bold portrait celebrating Caribbean feminine beauty and strength." },

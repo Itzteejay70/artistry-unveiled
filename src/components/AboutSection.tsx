@@ -1,11 +1,13 @@
 import AnimatedSection from "./AnimatedSection";
 import festivalCollage from "@/assets/festival-collage.png";
-import galleryDay from "@/assets/gallery-day.webp";
+import decorBrushBlue from "@/assets/decor-brush-blue.jpeg";
+import decorConfetti from "@/assets/decor-confetti.jpeg";
 
 const AboutSection = () => (
   <section id="about" className="py-24 md:py-32 relative overflow-hidden">
-    {/* Decorative paint blobs */}
-    <div className="absolute -right-16 top-20 w-64 h-64 paint-blob bg-purple/5 pointer-events-none" />
+    {/* Decorative elements */}
+    <img src={decorBrushBlue} alt="" className="absolute -right-16 top-10 w-40 opacity-10 pointer-events-none rotate-45" />
+    <img src={decorConfetti} alt="" className="absolute -left-10 bottom-20 w-28 opacity-10 pointer-events-none" />
     <div className="absolute -left-20 bottom-10 w-48 h-48 paint-blob bg-lime/5 pointer-events-none" />
 
     <div className="container mx-auto px-4">
@@ -28,7 +30,6 @@ const AboutSection = () => (
             communities, inspiring creativity, and showcasing the incredible talent of Jamaica and the Caribbean.
           </p>
 
-          {/* Paint-stroke divider */}
           <div className="h-1 w-32 bg-gradient-to-r from-lime via-gold to-purple rounded-full mb-8" />
 
           <div className="flex gap-10">
@@ -55,7 +56,6 @@ const AboutSection = () => (
               alt="Festival atmosphere collage"
               className="relative rounded-3xl w-full object-cover shadow-2xl shadow-purple/20"
             />
-            {/* Overlay accent card */}
             <div className="absolute -bottom-6 -left-6 bg-gold text-secondary-foreground px-6 py-4 rounded-2xl shadow-lg">
               <p className="font-display text-2xl tracking-wider">MAY 15</p>
               <p className="font-body text-xs">Portmore, JA</p>
