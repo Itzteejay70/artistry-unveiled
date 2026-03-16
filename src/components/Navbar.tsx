@@ -27,15 +27,6 @@ const Navbar = () => {
         </a>
 
         <div className="hidden lg:flex items-center gap-8">
-          {navLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className="text-sm font-semibold uppercase tracking-wide text-black hover:text-[#6f35ff] transition-colors"
-            >
-              {link.label}
-            </a>
-          ))}
 
           <a
             href="#register"
@@ -63,17 +54,7 @@ const Navbar = () => {
             className="lg:hidden overflow-hidden border-t border-black/10 bg-white"
           >
             <div className="flex flex-col gap-4 px-4 py-5">
-              {navLinks.map((link) => (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  onClick={() => setOpen(false)}
-                  className="text-base font-semibold uppercase tracking-wide text-black"
-                >
-                  {link.label}
-                </a>
-              ))}
-
+             
               <a
                 href="#register"
                 onClick={() => setOpen(false)}
