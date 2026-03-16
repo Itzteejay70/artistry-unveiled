@@ -17,18 +17,28 @@ const SponsorsSection = () => (
     <div className="container mx-auto px-4">
       <AnimatedSection className="text-center mb-12">
         <div className="inline-block bg-gold/15 border border-gold/30 rounded-full px-4 py-1.5 mb-4">
-          <span className="text-gold font-body text-sm tracking-[0.2em] uppercase">Partners</span>
+          <span className="text-gold font-body text-sm tracking-[0.2em] uppercase">
+            Partners
+          </span>
         </div>
-        <h2 className="font-heading text-3xl md:text-4xl text-foreground">Our Sponsors & Partners</h2>
+
+        <h2 className="font-heading text-3xl md:text-4xl text-foreground">
+          Our Sponsors & Partners
+        </h2>
+
         <div className="h-1 w-20 bg-gradient-to-r from-lime via-gold to-purple rounded-full mx-auto mt-4" />
       </AnimatedSection>
 
-      <div className="grid sm:grid-cols-3 gap-6 max-w-4xl mx-auto items-center">
+      <div className="grid grid-cols-3 gap-6 max-w-4xl mx-auto items-center">
         {sponsors.map((s, i) => (
           <AnimatedSection key={s.name} delay={i * 0.1}>
             <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.15 }}
               whileHover={{ scale: 1.05 }}
-              className={`glass-card rounded-2xl p-6 flex items-center justify-center hover:border-gold/40 transition-colors duration-300 cursor-pointer aspect-square ${s.bg}`}
+               className={`glass-card rounded-2xl p-6 flex items-center justify-center hover:border-gold/40 transition-colors duration-300 cursor-pointer aspect-square ${s.bg}`}
             >
               <img
                 src={s.logo}
@@ -36,7 +46,10 @@ const SponsorsSection = () => (
                 className="w-full h-full object-contain max-h-40"
               />
             </motion.div>
-            <p className="text-muted-foreground font-body text-xs text-center mt-3 leading-relaxed">{s.name}</p>
+
+            <p className="text-muted-foreground font-body text-xs text-center mt-3 leading-relaxed">
+              {s.name}
+            </p>
           </AnimatedSection>
         ))}
       </div>
